@@ -37,8 +37,7 @@ if (isset($_POST['Email_Address'])) {
 		!isset($_POST['Email_Address']) ||
 		!isset($_POST['Telephone_Number']) ||
 		!isset($_POST['Subject']) ||
-		!isset($_POST['Message']) ||
-		!isset($_POST['AntiSpam'])
+		!isset($_POST['Message'])
 	) {
 		died('Sorry, there appears to be a problem with your form submission.');
 	}
@@ -49,12 +48,10 @@ if (isset($_POST['Email_Address'])) {
 	$telephone  = $_POST['Telephone_Number'];// not required
 	$subject    = $_POST['Subject'];// required
 	$comments   = $_POST['Message'];// required
-	$antispam   = $_POST['AntiSpam'];// required
 
 	$error_message = "";
 
-	$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-	if (preg_match($email_exp, $email_from) == 0) {
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		$error_message .= 'The Email Address you entered does not appear to be valid.<br />';
 	}
 	if (strlen($first_name) < 2) {
@@ -68,10 +65,6 @@ if (isset($_POST['Email_Address'])) {
 	}
 	if (strlen($subject) < 2) {
 		$error_message .= 'The Subject you entered do not appear to be valid.<br />';
-	}
-
-	if ($antispam <> $antispam_answer) {
-		$error_message .= 'The Anti-Spam answer you entered is not correct.<br />';
 	}
 
 	if (strlen($error_message) > 0) {
@@ -94,11 +87,21 @@ if (isset($_POST['Email_Address'])) {
 	$headers = 'From: '.$email_from."\r\n".
 	'Reply-To: '.$email_from."\r\n".
 	'X-Mailer: PHP/'.phpversion();
-	mail($email_to, $email_subject, $email_message, $headers);
+
+	if (isset($_POST['url']) && $_POST['url'] == '') {
+		mail($email_to, $email_subject, $email_message, $headers);
+		$spam_status = "This is not SPAM";
+	} else {
+		$spam_status = "This is SPAM";
+	}
+	echo $spam_status;
+	die();
+
 	header("Location: $thankyou");
 
 	?>
-							<script>location.replace('<?php echo $thankyou;?>')</script>
+
+								<script>location.replace('<?php echo $thankyou;?>')</script>
 	<?php
 }
 die();

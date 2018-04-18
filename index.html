@@ -22,7 +22,6 @@ THE SOFTWARE.
 	required.add('Email_Address','EMAIL','Email Address');
 	required.add('Subject','NOT_EMPTY','Subject');
 	required.add('Message','NOT_EMPTY','Message');
-	required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
 	</script>
 	<link rel="stylesheet" type="text/css" href="freecontactform.css">
 	</head>
@@ -90,13 +89,9 @@ THE SOFTWARE.
 	<tr>
 	 <td colspan="2" style="text-align:center" >
 	  <div class="antispammessage">
-	  To help prevent automated spam, please answer this question
-	  <br /><br />
-		  <div class="antispamquestion">
-		   <span class="required_star"> * </span>
-		   Using only numbers, what is 10 plus 15? &nbsp; 
-		   <input type="text" name="AntiSpam" id="AntiSpam" maxlength="100" style="width:30px">
-		  </div>
+	  		To help prevent automated spam, please DO NOT answer this question
+	  		<br /><br />
+		  	<span class="antispammessage">Leave this empty: <input type="text" name="url" /></span>
 	  </div>
 	 </td>
 	</tr>

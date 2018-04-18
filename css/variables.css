@@ -1,0 +1,38 @@
+/* Using this stylesheet for variables for Yan to edit. Mostly color changes. */
+
+.front-page #menu {
+  background-color: #4000bf;   /*  Change color of Menu Bar on HOME page */
+}                              /* WAS #4000bf; */
+
+.about-page #menu {
+  background-color: #4000bf;   /*  Change color of Menu Bar on ABOUT page */							    
+}
+
+.support-page #menu {
+  background-color: #4000bf;   /*  Change color of Menu Bar on SUPPORT page */
+}
+
+.contact-page #menu {
+  background-color: #4000bf;   /*  Change color of Menu Bar on CONTACT page */
+}
+
+/* DROP DOWN MENU */
+
+#mobile-menu li {               /* Change this for Background Color on Menu Items */
+  background-color: black;    /* WAS #4000bf */
+  color: white;               /* Menu Text Color */
+}
+
+#mobile-menu li:hover {
+  background-color: #5e458e;  /* Background color on Menu items on HOVER */
+  color: white;               /* Text Color on HOVER */ 
+}                             /* WAS #318ED1; */
+
+#mobile-menu .current li, 
+#mobile-menu .current li:hover {    /* Background color on Menu for CURRENT page */
+  background-color: #4000bf;     /* WAS #5e458e */
+}
+
+
+
+

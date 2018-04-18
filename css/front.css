@@ -1,0 +1,190 @@
+/* CSS Specific to front page */
+
+#main {
+  clear: both;
+  min-height: 300px;
+  max-width: 900px;
+  margin: 30px auto 70px;
+}
+
+h1 {
+  font-family: 'Vollkorn', serif;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.welcome-block {
+  display: inline;
+  text-align: left;
+}
+
+.welcome-block p {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#menu {
+  position: relative;
+    top: 0px;
+  margin-top: -20px;
+  opacity: 1;
+  background-color: #4000BF;
+}
+
+.bold {
+  font-weight: 900;
+  color: #2d0556;
+}
+
+.slogan h1  {
+  margin-bottom: 210px;
+  clear: both;
+  z-index: 0;
+}                                                                                         
+
+#blue-stripe {
+  margin-top: -400px;
+  height: 400px;
+  text-align: center;
+  background-color: blue;
+  opacity: .5;
+  z-index: 50;
+}
+
+/* This is to annimate the banner image sliding to right */
+@keyframes slide_right {
+  0% {
+    transform: translateX(-300%);
+  }
+
+  5% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide_left {
+  0% {
+    transform: translateX(300%);
+  }
+  5% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.front-page header #red-stripe {
+  animation-name: slide_right;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 4s;     /* Was speed 1.5 */
+}
+
+.front-page header #blue-stripe {
+  animation-name: slide_left;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 4s;     /* Was speed 1.5 */
+}
+
+/* This is to annimate the menu bar sliding to left */
+/*@keyframes slide_menu_left {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}*/
+
+.front-page #menu {
+  animation-name: slide_menu_left;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 5s;       /* Was 3 */
+  color: white;
+  opacity: 1;
+  z-index: 100;
+}
+
+/* This is to annimate the menu sliding to the right */
+/*@keyframes slide_menu {
+  0% {
+    transform: translateX(-5000px);
+    opacity: .5;
+  }
+  60% {
+    transform: translateX(-420%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1.0;
+  }
+}*/
+
+.front-page #menu ul {
+  animation-name: slide_menu;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 6.5s;       /* Was 4.5 */
+}
+
+@media only screen and (max-width: 950px) {
+  #red-stripe,
+  #blue-stripe,
+  #slogan,
+  #header-image {
+    height: 45vw;
+  }
+  #blue-stripe {
+    margin-top: -45vw;
+  }
+  header #slogan {
+    margin-top: -38vw;
+    height: 60vw;
+    font-size: 1.8vw;
+    width: 90%;
+    padding: 5%;
+  }
+
+  #menu {
+    margin-top: 10vw;
+  }
+  h1 {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    line-height: 4vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header #slogan {
+    font-size: 8px;
+    margin-top: -65vw;
+  }
+  #red-stripe,
+  #blue-stripe,
+  #slogan,
+  #header-image {
+    height: 75vw;
+  }
+  #blue-stripe {
+    margin-top: -75vw;
+  }
+
+  header {
+    height: 65vw;
+  }
+
+  h1 {
+    line-height: 7vw;
+  }
+}

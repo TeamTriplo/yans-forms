@@ -51,7 +51,7 @@ if (isset($_POST['Email_Address'])) {
 
 	$error_message = "";
 
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	if (!filter_var($email_from, FILTER_VALIDATE_EMAIL)) {
 		$error_message .= 'The Email Address you entered does not appear to be valid.<br />';
 	}
 	if (strlen($first_name) < 2) {
@@ -90,19 +90,16 @@ if (isset($_POST['Email_Address'])) {
 
 	if (isset($_POST['url']) && $_POST['url'] == '') {
 		mail($email_to, $email_subject, $email_message, $headers);
-		$spam_status = "This is not SPAM";
-	} else {
-		$spam_status = "This is SPAM";
+		// $spam_status = "This is not SPAM";
 	}
-	echo $spam_status;
-	die();
 
 	header("Location: $thankyou");
 
 	?>
 
-									<script>location.replace('<?php echo $thankyou;?>')</script>
+				<script>location.replace('<?php echo $thankyou;?>')</script>
 	<?php
 }
 die();
 ?>
+

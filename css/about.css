@@ -1,0 +1,103 @@
+/* Change Images in Slideshow for ABOUT page */
+
+/* In the past, we have always used fixed sized images. When we are 
+   designing a professional site that will work on mobile devices
+   the images will sometimes change sizes. So for the background header
+   image, we need a very wide image. 
+
+   Header image > 1500px wide 
+
+   Some of the top and bottom will be cropped off, so you must use 
+   an image that does not require seeing everything */
+/* background image for header - must be a relatively wide image */
+
+#header-image {
+  background-image: url("../images/banner.jpg");
+}
+
+#image-two {
+  background-image: url("../images/b2.png");
+}
+
+#image-three {
+  background-image: url("../images/b3.png");
+}
+
+#image-four {
+  background-image: url("../images/b4.png");
+}
+
+
+/* CSS Specific to about page */
+
+#main {
+  clear: both;
+  min-height: 300px;
+  max-width: 900px;
+  margin: 30px auto 70px;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.welcome-block {
+  display: inline;
+  text-align: left;
+}
+
+.welcome-block p {
+  text-align: left;
+  margin-top: 20px;
+}
+
+header {
+  position: relative;
+}
+
+/* TEST CSS for temp page about-squares.php */
+
+.about-page-squares main section {
+  border: 1px solid grey;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+/* TEST CSS for temp page about-lines.php */
+
+.about-page-lines main section {
+  margin-bottom: 50px;
+}
+
+.about-page-lines hr {
+  margin-bottom: 50px;
+}
+
+.about-page-lines h2 {
+  margin-bottom: 50px;
+}
+
+/* headlines with lines */
+.decorated{
+     overflow: hidden;
+     text-align: center;
+ }
+.decorated > span{
+    position: relative;
+    display: inline-block;
+}
+.decorated > span:before, .decorated > span:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 591px; /* half of limiter*/
+    margin: 0 20px;
+}
+.decorated > span:before{
+    right: 100%;
+}
+.decorated > span:after{
+    left: 100%;
+}
+

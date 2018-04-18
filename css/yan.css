@@ -1,0 +1,807 @@
+/* Resets */
+
+p, h1, h2, h3, h4, html, body {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+#content {
+  margin-top: 50px;
+  min-height: 400px;
+}
+
+/*header {
+  z-index: 1000;
+}
+
+#menu {
+  z-index: 2000;
+}*/
+
+main {
+  margin: 70px 0px; 
+  clear: both;
+  min-height: 300px;
+}
+
+.clear:after {
+  clear: both;
+}
+
+/* Menu */
+
+ul.menu-full {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+  width: 600px;
+  height: 20px;
+  padding: 0px;
+}
+
+#menu {
+  width: 100%;
+  min-height: 60px;
+}
+
+#menu a, #menu a:visited {
+  color: white;
+}
+
+/* LINKS */
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
+a:active {
+  color: blue;
+}
+
+a, a:visited {
+  color: green;
+}
+
+a:hover {
+  color: blue;  /*  Use this color when hovering over links */
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+#support p,
+#about p {
+  margin-left: 20px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 35px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    line-height: 32px;
+}
+
+h2, h3, h4, .decorated {
+  color: #453f49;  /* This is the color of h2, h3, h4 headings  */
+} 
+
+#about h4 {
+  margin-top: 40px;
+}
+
+/* Images */
+
+
+img.profile-pic {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-top: 30;
+    margin-left: 20px;
+    width: 225px;
+}
+
+/*    */
+ul {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+li {
+  float: left;
+  color: white;
+  list-style-type: none;
+  margin: 20px 15px;
+  /* Adjust the size of the text in the menu */
+  font-size: 24px;
+}
+
+.menu-full li {
+  margin: 20px 40px;
+}
+
+img {
+  /* Adjust the size of the logo in the body */
+  width: 800px;
+}
+
+#menu li {
+  text-transform: uppercase;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+/* These are some preset max-widths for items in the HTML
+   you can change the values here or change the class
+   that is used in the HTML */
+
+.width-wide {
+  max-width: 900px;
+}
+
+.width-medium {
+  max-width: 800px;
+}
+
+.width-narrow {
+  max-width: 500px;
+}
+
+/* If you want to add a margin to an item in the HTML
+   you can add this class */
+
+.margin-top {
+  margin-top: 20px;
+}
+
+/* You can add these classes to elements in the 
+   HTML to change the alignment */
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#slogan {
+  /* Adjust the size of the text in the body of the page */
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.normal {
+  font-weight: 100;
+}
+
+article {
+  clear: both;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+input {
+  border: 1px solid grey;
+  padding: 2px;
+
+}
+
+.buttons input.form-complete {
+  border: 3px solid black;
+  color: black;
+}
+
+.buttons input.form-complete:hover {
+  background-color: #17ef3f;
+  color: white;
+  font-weight: 900;
+}
+
+td {
+  padding: 3px 5px;
+}
+
+
+/*  */
+.section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.article-text {
+  display: block;
+  vertical-align: center;
+}
+
+footer {
+  margin-top: 200px;
+  padding: 30px 15px 60px;
+  clear: both;
+}
+
+/* Floats */
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Columns */
+
+.column-33 {
+  width: 33%;
+}
+
+.column-66 {
+  width: 66%;
+}
+
+.column-100 {
+  width: 100%;
+}
+
+/* Articles on Why Hire Us page */
+.article-text {
+  width: 65%;
+}
+.article-image {
+  width: 35%;
+}
+
+.article-text a {
+  font-size: 18px;   /*     Was 15px     */
+}
+
+.article-image img {
+  width: 70%;
+  margin: 15%;
+}
+
+#hire-us article {
+  margin: 30px 0px 30px;
+}
+
+.column-1 p {
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    height: 30vw;
+  }
+  img {
+    width: 70%;
+  }
+  #red-stripe,
+  #blue-stripe,
+  #slogan,
+  #header-image {
+    height: 30vw;
+  }
+  .float-right,
+  .float-left {
+    width: 70%;
+    margin: 20px 15% 50px;
+
+  }
+  #content,
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .article-text,
+  .article-image {
+    width: 90%;
+    margin: 0px 5% 0px;
+  }
+  .float-right,
+  .float-left {
+    width: 90%;
+    margin: 20px 5% 50px;
+  }
+/*  textarea,
+  input {
+    max-width: 70%;
+  }*/
+}
+
+/* asdfasdf asf */
+
+.profile-pic {
+  width: 300px;
+}
+
+
+/* Mobile Menu */
+
+#menu {
+/*  position: relative;*/
+}
+
+#menu ul {
+  max-width: none;
+}
+
+.hamburger {
+  position: absolute;
+    top: 12px;
+    right: 25px;
+  width: 40px;
+}
+
+#mobile-menu {
+  position: fixed;
+    top: 50px;
+  overflow: hidden;
+  transition: max-height .5s;
+  max-height: 0;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#mobile-menu ul {
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+}
+
+#mobile-menu li {
+  width: 100%;
+  padding: 20px 5px 20px 15px;
+  background-color: #4000BF;
+  list-style-type: none;
+  margin: 0px;
+  border-bottom: 1px solid black;
+}
+
+#mobile-menu li.menu-first {
+  border-top: 1px solid black;
+}
+
+#mobile-menu a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 520px) {
+  #mobile-menu,
+  .menu-icon {
+    display: block;
+  }
+
+  ul.menu-full {
+    display: none;
+  }
+  #mobile-menu {
+    top: 0px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+}
+
+/* headlines with lines */
+.decorated{
+  overflow: hidden;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  font-size: 30px;
+}
+.decorated > span{
+  position: relative;
+  display: inline-block;
+}
+.decorated > span:before, .decorated > span:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-bottom: 2px solid;
+  width: 591px; /* half of limiter*/
+  margin: 0 20px;
+
+}
+.decorated > span:before{
+    right: 100%;
+}
+.decorated > span:after{
+    left: 100%;
+}
+
+
+/* HEADER REGION */
+
+#red-stripe {
+  height: 400px;
+  text-align: center;
+  background-color: red;
+  opacity: .5;
+  z-index: 50;
+}
+
+#slogan {
+  position: relative;
+  z-index: 100;
+}
+
+header {
+  position: relative;
+}
+
+header #slogan {
+  color: #2d0556;
+  margin-top: -300px;
+  margin-bottom: 80px;
+  height: 200px;
+  width: 1000px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}
+
+/* This is to annimate the banner image sliding to right */
+@keyframes slide_image {
+  0% {
+    transform: translateX(-300%);
+  }
+  70% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide_red {
+  0% {
+    transform: translateX(-300%);
+  }
+  25% {
+    transform: translateX(-300%);
+  }
+
+  80% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide_blue {
+  0% {
+    transform: translateX(-300%);
+  }
+  50% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide_grey {
+  0% {
+    transform: translateX(-300%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+header #header-image {
+  animation-name: slide_image;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 3s;   /*  Speed was 1.5 */
+}
+
+header #image-two {
+  animation-name: slide_red;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 6s;     /*  Speed was 1.5 */
+}
+
+header #image-three {
+  animation-name: slide_blue;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 9s;    /*  Speed was 1.5 */
+}
+
+header #image-four {
+  animation-name: slide_grey;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 11s;     /*  Speed was 1.5 */
+}
+
+#header-image {
+  background-color: green;
+  background-position: center center;
+  background-size: 100% auto;
+  height: 370px;
+  width: 100%;
+}
+
+#header-image {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  height: 370px;
+  width: 100%;
+  z-index: 100;
+}
+
+#image-two {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  height: 370px;
+  width: 100%;
+  margin-top: -370px;
+  text-align: center;
+  z-index: 200;
+}
+
+#image-three {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  height: 370px;
+  width: 100%;
+  margin-top: -370px;
+  text-align: center;
+  z-index: 300;
+}
+
+#image-four {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  height: 370px;
+  margin-top: -370px;
+  width: 100%;
+  text-align: center;
+  z-index: 400;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    height: 40vw;
+  }
+  #header-image,
+  #image-two,
+  #image-three,
+  #image-four {
+    height: 40vw;
+  }
+  #image-two,
+  #image-three,
+  #image-four {
+    margin-top: -40vw;
+  }
+}
+
+#menu {
+  position: relative;
+    top: 0px;
+  opacity: 1;
+}
+
+#menu {
+  color: white;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* FONT AWESOME OVERRIDES */
+
+.fa-times {
+  font-size: 30px;
+  position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+#mobile-menu .current li,
+#mobile-menu .current li:hover {
+  background-color: #5e458e;
+}
+
+@media only screen and (max-width: 800px) {
+  table tr td {
+    float: left;
+    width: 100%;
+  }
+  table tr {
+    clear: both;
+    margin-bottom: 40px;
+  }
+
+  table td.field-label {
+    margin-top: 10px;
+  }
+
+  table td label {
+    /*border: 2px solid red;*/
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  table td input {
+    height: 45px;
+    font-size: 18px;
+    width: 100%;
+    color: blue;
+    border: 1px solid grey;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  table td textarea {
+    height: 195px;
+    width: 100%;
+    font-size: 18px;
+    color: blue;
+    border: 1px solid grey;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .buttons {
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  footer {
+    padding: 30px 30px 60px;
+    margin-top: 150px;
+  }
+
+}
+
+
+/* Changes to special form for y.Klein */
+
+/*.required {
+  display: none;
+}*/
+
+.required {
+  display: inline;
+  color: red;
+}
+
+tr {
+  width: 600px;
+  height: auto;
+}
+
+td {
+  display: block;
+}
+
+.field-input td,
+.field-label {
+  display: block;
+  width: 100%;
+}
+
+.field-label {
+  font-size:  14px;
+}
+
+.field-input {
+  height: 40px;
+  width: 100%;
+}
+
+.contact-us table {
+  width: 600px;
+}
+
+.field-input input {
+  width: 600px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.field-input textarea {
+  width: 600px;
+  height: auto;
+  font-size: 18px;
+}
+
+tbody {
+    display: block;
+    vertical-align: default;
+}
+
+.comment-row {
+  display: block;
+  height: 150px;
+}
+
+.buttons input  {
+  padding: 5px 20px 5px 20px;
+  font-size: 16px;
+  font-weight: 900;
+  margin-top: 10px;
+  color: transparent;
+}
+
+@media only screen and (max-width: 800px) {
+  .required {
+    display: inline;
+    color: red;
+  }
+
+  tr {
+    width: 100%;
+  }
+
+  .field-input textarea {
+    width: 100%;
+    height: auto;
+  }
+
+  .field-input input {
+    width: 100%;
+    height: 30px;
+  }
+
+  .contact-us table {
+    width: 100%;
+  }
+}
+
+
+
+

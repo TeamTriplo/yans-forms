@@ -1,0 +1,28 @@
+/* Change Images in Slideshow for CONTACT page */
+
+/* In the past, we have always used fixed sized images. When we are 
+   designing a professional site that will work on mobile devices
+   the images will sometimes change sizes. So for the background header
+   image, we need a very wide image. 
+
+   Header image > 1500px wide 
+
+   Some of the top and bottom will be cropped off, so you must use 
+   an image that does not require seeing everything */
+/* background image for header - must be a relatively wide image */
+
+#header-image {
+  background-image: url("../images/abstract-1.jpg");
+}
+
+#image-two {
+  background-image: url("../images/a7.jpg");
+}
+
+#image-three {
+  background-image: url("../images/a5.jpg");
+}
+
+#image-four {
+  background-image: url("../images/nature2.jpg");
+}

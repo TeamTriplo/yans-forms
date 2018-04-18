@@ -23,93 +23,87 @@ THE SOFTWARE.
 	required.add('Subject','NOT_EMPTY','Subject');
 	required.add('Message','NOT_EMPTY','Message');
 	</script>
-	<link rel="stylesheet" type="text/css" href="freecontactform.css">
+	<link rel="stylesheet" type="text/css" href="contactform.css">
 	</head>
 	<body>
 	
-	<form name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
-	<table width="400px" class="freecontactform">
-	<tr>
-	 <td colspan="2">
-	  
-	 <div class="freecontactformheader">Contact Us Form</div>
-	  
-	 <div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.</div>
-	  
-	 </td>
-	</tr>
-	<tr>
-	 <td valign="top">
-	  <label for="First_Name" class="required">First Name<span class="required_star"> * </span></label>
-	 </td>
-	 <td valign="top">
-	  <input type="text" name="First_Name" id="First_Name" maxlength="80" style="width:230px">
-	 </td>
-	</tr>
-	<tr>
-	 <td valign="top">
-	  <label for="Last_Name" class="required">Last Name<span class="required_star"> * </span></label>
-	 </td>
-	 <td valign="top">
-	  <input type="text" name="Last_Name" id="Last_Name" maxlength="80" style="width:230px">
-	 </td>
-	</tr>
-	<tr>
-	 <td valign="top">
-	  <label for="Email_Address" class="required">Email Address<span class="required_star"> * </span></label>
-	 </td>
-	 <td valign="top">
-	  <input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:230px">
-	 </td>
-	</tr>
-	<tr>
-	 <td valign="top">
-	  <label for="Telephone_Number" class="not-required">Telephone Number</label>
-	 </td>
-	 <td valign="top">
-	  <input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width:230px">
-	 </td>
-	</tr>
-	<tr>
-	 <td valign="top">
-	  <label for="Subject" class="required">Subject<span class="required_star"> * </span></label>
-	 </td>
-	 <td valign="top">
-	  <input type="text" name="Subject" id="Subject" maxlength="80" style="width:230px">
-	 </td>
-	</tr>
-	<tr>
-	 <td valign="top">
-	  <label for="Message" class="required">Message<span class="required_star"> * </span></label>
-	 </td>
-	 <td valign="top">
-	  <textarea style="width:230px;height:160px" name="Message" id="Message" maxlength="2000"></textarea>
-	 </td>
-	</tr>
-	<tr>
-	 <td colspan="2" style="text-align:center" >
-	  <div class="antispammessage">
-	  		To help prevent automated spam, please DO NOT answer this question
-	  		<br /><br />
-		  	<span class="antispammessage">Leave this empty: <input type="text" name="url" /></span>
-	  </div>
-	 </td>
-	</tr>
-	<tr>
-	 <td colspan="2" style="text-align:center" >
-	 <br /><br />
-	  <input type="submit" value=" Submit Form " style="width:200px;height:40px">
-	  <br /><br />
-	  <!-- 
-	  If you want to remove this author link, 
-	  please purchase an unbranded version from: http://www.freecontactform.com/unbranded_form.php 
-	  Or upgrade to the professional version at: http://www.freecontactform.com/professional.php
-	  -->
-	  
-	  <br /><br />
-	 </td>
-	</tr>
-	</table>
+	<form id="contactform" name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
+
+		<div class="row">
+			 <div>
+				 <div class="freecontactformheader">Contact Us Form</div>
+				 <div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.</div>
+			 </div>
+		</div>
+
+		<div class="row">
+			 <div class="label">
+			  	<label for="First_Name" class="required">First Name<span class="required_star"> * </span></label>
+			 </div>
+			 <div class="input">
+			  	<input type="text" name="First_Name" id="First_Name" maxlength="80">
+			 </div>
+		</div>
+
+		<div class="row">
+			<div class="label">
+			  	<label for="Last_Name" class="required">Last Name<span class="required_star"> * </span></label>
+			</div>
+			<div class="input">
+			  	<input type="text" name="Last_Name" id="Last_Name" maxlength="80">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="label">
+			  	<label for="Email_Address" class="required">Email Address<span class="required_star"> * </span></label>
+			</div>
+			<div class="input">
+			  	<input type="text" name="Email_Address" id="Email_Address" maxlength="100">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="label">
+			  	<label for="Telephone_Number" class="not-required">Telephone Number</label>
+			</div>
+			<div class="input">
+			  	<input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="label">
+			  	<label for="Subject" class="required">Subject<span class="required_star"> * </span></label>
+			</div>
+			<div class="input">
+			  	<input type="text" name="Subject" id="Subject" maxlength="80">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="label">
+			  	<label for="Message" class="required">Message<span class="required_star"> * </span></label>
+			</div>
+			<div class="input">
+			  	<textarea name="Message" id="Message" maxlength="2000"></textarea>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="antispammessage">
+			  	To help prevent automated spam, please DO NOT answer this question
+			  	<br /><br />
+				<span class="antispammessage">Leave this empty: <input type="text" name="url" /></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="submit">
+				<input type="submit" value=" Submit Form ">
+			</div>
+		</div>
+
 	</form>
 </body>
 </html>

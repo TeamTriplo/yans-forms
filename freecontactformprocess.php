@@ -101,7 +101,7 @@ if (isset($_POST['Email_Address'])) {
 
 	?>
 
-								<script>location.replace('<?php echo $thankyou;?>')</script>
+									<script>location.replace('<?php echo $thankyou;?>')</script>
 	<?php
 }
 die();

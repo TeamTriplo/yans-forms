@@ -20,7 +20,9 @@
  *
  */
 
-if (isset($_POST['Email_Address'])) {
+echo json_encode($_POST);
+
+if (isset($_POST['email'])) {
 
 	include 'freecontactformsettings.php';
 
@@ -31,23 +33,20 @@ if (isset($_POST['Email_Address'])) {
 		echo "Please go back and fix these errors.<br /><br />";
 		die();
 	}
-
-	if (!isset($_POST['First_Name']) ||
-		!isset($_POST['Last_Name']) ||
-		!isset($_POST['Email_Address']) ||
-		!isset($_POST['Telephone_Number']) ||
-		!isset($_POST['Subject']) ||
-		!isset($_POST['Message'])
+// {"first_name":"David","last_name":"Radcliffe","email":"dradcliffe@gmail.com","telephone":"","comments":"Comments"}
+	if (!isset($_POST['first_name']) ||
+		!isset($_POST['last_name']) ||
+		!isset($_POST['email']) ||
+		!isset($_POST['comments'])
 	) {
 		died('Sorry, there appears to be a problem with your form submission.');
 	}
 
-	$first_name = $_POST['First_Name'];// required
-	$last_name  = $_POST['Last_Name'];// required
-	$email_from = $_POST['Email_Address'];// required
-	$telephone  = $_POST['Telephone_Number'];// not required
-	$subject    = $_POST['Subject'];// required
-	$comments   = $_POST['Message'];// required
+	$first_name = $_POST['first_name'];// required
+	$last_name  = $_POST['last_name'];// required
+	$email_from = $_POST['email'];// required
+	$telephone  = $_POST['telephone'];// not required
+	$comments   = $_POST['comments'];// required
 
 	$error_message = "";
 
@@ -62,9 +61,6 @@ if (isset($_POST['Email_Address'])) {
 	}
 	if (strlen($comments) < 2) {
 		$error_message .= 'The Comments you entered do not appear to be valid.<br />';
-	}
-	if (strlen($subject) < 2) {
-		$error_message .= 'The Subject you entered do not appear to be valid.<br />';
 	}
 
 	if (strlen($error_message) > 0) {

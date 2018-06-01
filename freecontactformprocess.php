@@ -20,8 +20,6 @@
  *
  */
 
-echo json_encode($_POST);
-
 if (isset($_POST['email'])) {
 
 	include 'freecontactformsettings.php';
@@ -33,7 +31,6 @@ if (isset($_POST['email'])) {
 		echo "Please go back and fix these errors.<br /><br />";
 		die();
 	}
-// {"first_name":"David","last_name":"Radcliffe","email":"dradcliffe@gmail.com","telephone":"","comments":"Comments"}
 	if (!isset($_POST['first_name']) ||
 		!isset($_POST['last_name']) ||
 		!isset($_POST['email']) ||

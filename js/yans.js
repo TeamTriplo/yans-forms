@@ -57,10 +57,10 @@ function showHam () {
 
 // Path to check if form is filled out
 
-var myFirstName = document.getElementById("first-name");
-var myLastName = document.getElementById("last-name");
-var myEmail = document.getElementById("email");
-var myComments = document.getElementById("comments");
+var myFirstName = document.getElementById("First_Name");
+var myLastName = document.getElementById("Last_Name");
+var myEmail = document.getElementById("Email_Address");
+var myComments = document.getElementById("Message");
 var mySubmitButton = document.getElementById("submit-button");
 var submitReady = 1;
 
@@ -79,9 +79,9 @@ myComments.addEventListener("change", function() {
 
 function checkFields () {
   if (myFirstName.value &&  myLastName.value && myEmail.value && myComments.value ) {
-    mySubmitButton.className += " form-complete";
+    mySubmitButton.classList.add('form-complete');
   } else {
-    mySubmitButton.className -= " form-complete";
+    mySubmitButton.classList.remove('form-complete');
   }
 
 }

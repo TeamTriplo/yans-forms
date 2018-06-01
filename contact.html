@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="contact-page">
+<head>
+    <title>Contact Yan's Place</title>
+    <script src="js/contactformvalidation.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/contact-form-handler.js"></script>
+    <script>
+
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/yan.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/variables.css">
+
+</head>
+<body class="contact-us">
+
+<header>
+
+    <!-- Select images in "/css/contact.css" -->
+    <div id="header-image" class="slide-ham">
+
+    </div>
+
+    <div id="image-two" class="slide-ham">
+
+    </div>
+
+    <div id="image-three" class="slide-ham">
+
+    </div>
+
+    <div id="image-four" class="slide-ham">
+
+    </div>
+
+</header>
+
+<section id="menu">
+    <div id="mobile-menu" class="hide">
+        <ul>
+
+        </ul>
+    </div>
+</section>
+
+<main class="width-medium center section">
+    <form id="ajax-contact" name="freecontactform" method="post" onsubmit="return validate.check(this)">
+        <table class="center">
+            <tr>
+                <td class="field-label" valign="top">
+                    <label for="First_Name">First Name <span class="required">*</span></label>
+                </td>
+                <td class="field-input" valign="top">
+                    <input  id="First_Name" type="text" name="first_name">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="field-label" valign="top">
+                    <label for="Last_Name">Last Name <span class="required">*</span></label>
+                </td>
+                <td class="field-input" valign="top">
+                    <input  id="Last_Name" type="text" name="last_name" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td class="field-label" valign="top">
+                    <label for="Email_Address">Email Address <span class="required">*</span></label>
+                </td>
+                <td class="field-input" valign="top">
+                    <input  id="Email_Address" type="text" name="email" maxlength="80" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td class="field-label" valign="top">
+                    <label for="Telephone_Number">Telephone Number</label>
+                </td>
+                <td class="field-input" valign="top">
+                    <input  id="Telephone_Number" type="text" name="telephone" maxlength="30" size="30">
+                </td>
+            </tr>
+            <tr class="comment-row">
+                <td class="field-label" valign="top">
+                    <label for="Message">Comments <span class="required">*</span></label>
+                </td>
+                <td class="field-input" valign="top">
+                    <textarea  id="Message" name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="buttons ">
+                        <input id="submit-button" type="submit" value="Email Form"></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</main>
+
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Yan's Place</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="thankyou freecontactform">
+                    <h1>Thank You.</h1>
+                    <p>We have received your message.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <!-- You can align the text in the footer using "left", "right", or "center" -->
+    <section class="center width-wide right">
+        <p>Copyright 2018 - Yan's Place * Minnesota</p>
+    </section>
+</footer>
+<script type="text/javascript" src="js/yans.js"></script>
+
+</body>
+</html>

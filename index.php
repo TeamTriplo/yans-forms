@@ -4,7 +4,7 @@ include 'contactformprocess.php';
 <html class="contact-page">
 <head>
   <title></title>
-    <script src="contactformvalidation.js"></script>
+    <script src="js/contactformvalidation.js"></script>
   <script>
     required.add('First_Name','NOT_EMPTY','First Name');
     required.add('Last_Name','NOT_EMPTY','Last Name');
